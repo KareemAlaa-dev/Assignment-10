@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 10</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-4" dir="ltr" style="width: 60%">
+      <div class="mb-3">
+        <label for="name" class="form-label">Site Name</label>
+        <input type="text" id="siteName" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Site URL</label>
+        <input type="text" id="siteUrl" class="form-control" />
+      </div>
+      <button class="btn btn-primary" id="SubmitBtn" onclick="addSite()">Submit</button>
+      <div class="header d-flex justify-content-between align-items-center mt-4 bg-danger p-3">
+        <div class="part d-flex justify-content-center">
+          <h2>Index</h2>
+        </div>
+        <div class="part d-flex justify-content-center">
+          <h2>Website Name	</h2>
+        </div>
+        <div class="part d-flex justify-content-center">
+          <h2>Visit</h2>
+        </div>
+        <div class="part d-flex justify-content-center">
+          <h2>Delete</h2>
+        </div>
+      </div>
+      <div id="rowData"></div>
+    </div>
+    <script src="Js/main.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.header .part h2 {
+  font-size: 20px;
+  margin: 0;
+}
+.header .part{
+  width: 25%;
+}
+.content{
+  background-color: aqua;
+}
+.content .repeat p {
+  color: #000;
+  font-size: 20px;
+  margin: 0;
+}
+.content .repeat{
+  width: 25%;
+}
