@@ -26,20 +26,18 @@ function displaySite(arr) {
   var container = "";
   for (var i = 0; i < arr.length; i++) {
     container += `
-    <div class="content d-flex justify-content-between align-items-center p-3">
-        <div class="repeat d-flex justify-content-center">
-          <p>${i}</p>
-        </div>
-        <div class="repeat d-flex justify-content-center">
-          <p>${arr[i].name}</p>
-        </div>
-        <div class="repeat d-flex justify-content-center">
-          <button class="btn btn-warning"><a href="${arr[i].url}">Visit</a></button>
-        </div>
-        <div class="repeat d-flex justify-content-center">
-          <button class="btn btn-danger" onclick="deleteSite(${i})">Delete</button>
-        </div>
-      </div>
+      <tr>
+        <td data-cell="Index">${i}</td>
+        <td data-cell="WebsiteName">${arr[i].name}</td>
+        <td data-cell="Visit">
+          <button class="btn btn-warning">
+            <a href="https://${arr[i].url}">Visit</a>
+          </button>
+        </td>
+        <td data-cell="Delete">
+          <button class="btn btn-danger" onclick="deleteSite(${i})">delete</button>
+        </td>
+      </tr>
     `;
   }
   rowData.innerHTML = container;
@@ -48,5 +46,5 @@ function deleteSite(index) {
   siteList.splice(index, 1);
   console.log(siteList);
   localStorage.setItem("site", JSON.stringify(siteList));
-  displaySite(siteList)
+  displaySite(siteList);
 }

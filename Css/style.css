@@ -1,18 +1,63 @@
-.header .part h2 {
-  font-size: 20px;
-  margin: 0;
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.header .part{
-  width: 25%;
+table {
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.content{
-  background-color: aqua;
+thead th {
+  background: #f3f4f6;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid #e5e7eb;
 }
-.content .repeat p {
-  color: #000;
-  font-size: 20px;
-  margin: 0;
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
 }
-.content .repeat{
-  width: 25%;
+.submit-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px;
+}
+.container{
+  width: 70%;
+  padding-block: 20px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  thead {
+    display: none;
+  }
+  .container{
+  width: 90%;
+}
+  tr {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    border-bottom: 2px solid #000;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    display: flex;
+  }
+  td::before {
+    content: attr(data-cell) ":";
+    flex: 0 0 50%;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+  }
+  td > * {
+    flex: 0 0 50%;
+  }
 }
