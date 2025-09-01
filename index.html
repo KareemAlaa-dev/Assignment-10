@@ -6,37 +6,76 @@
     <title>Assignment 10</title>
     <link rel="stylesheet" href="Css/bootstrap.min.css" />
     <link rel="stylesheet" href="Css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="form-container">
-        <div>
-          <label for="name" class="form-label">Site Name</label>
-          <input type="text" id="siteName" class="form-control" />
+    <div class="container py-4">
+      <h1 class="title text-center mb-2">🌐 Website Manager</h1>
+      <p class="subtitle text-center mb-4">
+        Save, visit & manage your favorite websites
+      </p>
+
+      <!-- Form -->
+      <div class="form-container shadow p-4 rounded mb-4">
+        <div class="mb-3">
+          <label for="siteName" class="form-label">Site Name</label>
+          <input
+            type="text"
+            id="siteName"
+            class="form-control stylish-input"
+            placeholder="Enter website name"
+          />
+          <div id="nameAlert" class="alert alert-danger py-1 mt-2 d-none">
+            Name must be at least 3 characters long.
+          </div>
         </div>
-        <div>
-          <label for="name" class="form-label">Site URL</label>
-          <input type="text" id="siteUrl" class="form-control" />
+
+        <div class="mb-3">
+          <label for="siteUrl" class="form-label">Site URL</label>
+          <input
+            type="text"
+            id="siteUrl"
+            class="form-control stylish-input"
+            placeholder="example.com"
+          />
+          <div id="urlAlert" class="alert alert-danger py-1 mt-2 d-none">
+            Please enter a valid URL (e.g., example.com or https://example.com).
+          </div>
         </div>
-        <div class="submit-btn">
-          <button class="btn btn-primary" id="SubmitBtn" onclick="addSite()">
-            Submit
+
+        <div class="submit-btn text-center">
+          <button
+            class="btn btn-primary px-4"
+            id="SubmitBtn"
+            onclick="addSite()"
+          >
+            🚀 Add Website
           </button>
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Index</th>
-            <th>WebsiteName</th>
-            <th>Visit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody id="rowData"></tbody>
-      </table>
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table
+          class="table table-bordered table-hover align-middle text-center"
+        >
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Website</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="rowData"></tbody>
+        </table>
+      </div>
     </div>
 
+    <!-- Scripts -->
     <script src="Js/main.js"></script>
     <script src="Js/bootstrap.bundle.min.js"></script>
   </body>
